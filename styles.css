@@ -1,0 +1,788 @@
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #f4f6f9;
+}
+
+.main_layout {
+  display: flex;
+
+}
+.medica{
+  height: 19px;
+  width: 20px;
+}
+
+.main_navbar {
+  width: 100%;
+}
+.dashboard_tab{
+  position: relative;
+}
+.dashboard_tab:hover{
+  background-color: #f8f9fa;
+}
+.dashboard_tab.active{
+  background-color: #f8f9fa;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.nav-link.active::before {
+  content: "";
+  background-color: #f8f9fa;
+  height: 30px;
+  width: 30px;
+  transform: rotate(45deg);
+  display: block;  /* Ensure it displays */
+  position: absolute;  /* Proper positioning */
+  top: -10px;
+  right: -20px;
+}
+.nav-link.active::after {
+  content: "";
+  background-color: #f8f9fa;
+  height: 30px;
+  width: 30px;
+  transform: rotate(45deg);
+  display: block;  /* Ensure it displays */
+  position: absolute;  /* Proper positioning */
+  bottom: -10px;
+  right: -20px;
+}
+.dashboard_tab:hover{
+  background-color: #f8f9fa;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+  /* .submenu_tabs.active{
+    background-color: #f8f9fa;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  } */
+/* Sidebar css starts */
+.navbar-nav{
+  flex-direction: row;
+}
+.sidebar {
+  background: #e6f4f7;
+  width: 250px;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.sidebar .dashboard_tab {
+  margin: 10px 0px;
+  font-weight: 900 !important;
+}
+
+#professionalTools {
+  font-weight: 600 !important;
+}
+
+.pro_che_icon {
+  margin: 0xp 5px;
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+.sidebar .nav-link {
+  color: #333;
+  font-weight: 400 !important;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+
+.sidebar .nav-link i {
+  margin-right: 10px;
+}
+
+.sidebar .logo {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sidebar .logo img {
+  width: 180px;
+}
+
+.sub-menu {
+  display: none;
+  margin-left: 30px;
+}
+
+.submenu_tabs {
+  padding: 18px 17px;
+}
+
+.side_img img {
+  margin: 20px;
+}
+
+.side_img img {
+  width: 190px;
+}
+
+.section_top_img {
+  padding-top: 14px;
+  margin: 15px 0px
+}
+.section_top_img img{
+  width: 100%;
+}
+
+
+
+.sub-menu .nav-link {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.toggle-btn {
+  display: none;
+  color: #016a70;
+  border-radius: 30px !important;
+  border: none;
+  height: 40px;
+  width: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  top: 7px;
+  left: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+    position: absolute;
+    z-index: 5;
+  }
+  .nav-column{
+    flex-direction: column;
+  }
+  .margin{
+    margin-bottom: 10px;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar.active+.toggle-btn.open {
+    display: none;
+  }
+
+  .sidebar.active~.toggle-btn.band {
+    visibility: visible;
+  }
+  .sidebar .logo img {
+    width: 150px;
+  }
+  .toggle-btn {
+    display: block;
+    z-index: 12;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+  .sidebar {
+    height: fi;
+  }
+  #closeIcon {
+    display: block;
+    color: #009688;
+    font-size: 14px;
+    z-index: 999;
+    position: relative;
+  }
+  .table th,
+.table td {
+  width: 50px;
+  height: 35px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+}
+
+.toggle-btn.band {
+  margin-left: 180px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border: none;
+  position: absolute;
+  top: 9px;
+  left: 24px;
+  height: 25px !important;
+  width: 25px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  border-radius: 50%;
+  padding: 0px !important;
+}
+/* Sidebar css ends */
+
+
+/* Navbar css starts */
+.navbar-custom {
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #009688;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: auto; /* Aligns Welcome back to the left */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar-toggler-icon {
+  color: #009688;
+  border-radius: 30px !important;
+  padding: 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.search-bar input {
+  border-radius: 20px;
+  background-color: #E8F1F5;
+  width: 350px !important;
+}
+
+.search-bar input:focus {
+  border: 1px solid #009688;
+  box-shadow: none;
+}
+
+.nav-item .nav-link {
+  color: #555;
+}
+
+.custom-select {
+  border-radius: 35px;
+  background-color: #E8F1F5;
+  margin-top: 4px;
+}
+
+.profile_button {
+  border: 1px solid #E8F1F5;
+  border-radius: 35px;
+  background-color: #E8F1F5;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  min-width: 150px;
+}
+
+.dropdown-toggle::after {
+  margin-left: 8px;
+}
+
+.notification_icon {
+  background-color: #E8F1F5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+}
+.notification_icon.bell{
+  width: 48px;
+
+}
+
+.my-menu{
+  position: absolute !important;
+}
+
+/* Navbar css ends */
+
+
+.page-feature {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #e6f9fb;
+  color: #555;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-right: 10px;
+  gap: 10px; 
+  flex-wrap: wrap; 
+
+}
+
+.feature-text {
+  background-color: #000;
+  color: #fff;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 14px;
+  white-space: nowrap; 
+}
+
+.feature-description {
+  flex: 1; 
+  min-width: 200px; 
+}
+
+@media (max-width: 768px) {
+  .page-feature {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+  .profile_button {
+    width: 63px;
+    height: 43px;
+    border-radius: 25px;
+  }
+  .feature-description {
+      text-align: center;
+  }
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: -8px;
+    padding: 10px;
+    font-size: 22px;
+    /* margin-left: 5px !important; */
+  }
+  .search-bar input {
+    width: 262px !important;
+    margin-top: 5px;
+  }
+  .navbar-custom{
+    padding: 0px;
+  }
+}
+
+
+
+
+
+.progress-container{
+  max-width: 532px;
+}
+
+
+.calender-header h1 {
+  color: #141b29;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.calender-header p {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.2rem;
+}
+
+.calenderInner-container {
+  border-radius: 14px;
+}
+
+.calendar {
+  background-color: #e8f1f5;
+  border-radius: 14px;
+  min-width: 1020px;
+  width: 90%;
+}
+
+.calendar-inner-head h2 {
+  font-size: 20px;
+  color: #333;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.calenderDay-container {
+  background-color: #fff;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.calenderDay-container .calendar-day {
+  background-color: #e8f1f5;
+  border-radius: 4px;
+  position: relative;
+}
+
+.calenderDay-container .calendar-day p {
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.calendar-day.mon img {
+  position: absolute;
+  bottom: -40px;
+  height: 32px;
+  left: 37px;
+}
+
+.calendar-day.wed img {
+  position: absolute;
+  bottom: -122px;
+  height: 114px;
+  left: 37px;
+}
+
+.event-container {
+  position: relative;
+  height: 300px;
+}
+
+.event-checkup {
+  background-color: #fff;
+  border-radius: 14px;
+  gap: 10px;
+  width: 197px;
+  position: absolute;
+}
+
+.event-checkup img {
+  height: 41px;
+  width: 41px;
+}
+
+.event-checkup p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.event-checkup span {
+  font-size: 12px;
+}
+
+.event-monday {
+  top: 32px;
+  left: 14%;
+}
+
+.event-tuesday {
+  top: 200px;
+  left: 30%;
+}
+
+.event-Wednesday {
+  top: 113px;
+  left: 47%;
+}
+
+.event-Thursday {
+  top: 32px;
+  right: 25.5%;
+}
+
+.event-Friday {
+  top: 200px;
+  right: 50px;
+}
+
+.calendar-day.tue img {
+  position: absolute;
+  bottom: -208px;
+  height: 200px;
+  left: 37px;
+}
+
+@media screen and (max-width: 1051px) {
+  .calenderInner-container {
+    border-radius: 14px;
+    overflow-x: scroll;
+  }
+}
+
+
+
+
+
+
+body {
+  background-color: #f8f9fa;
+}
+
+.calendar-container {
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  width: 48px;
+  height: 44px;
+  vertical-align: middle;
+  font-weight: 500;
+  padding: 8px !important;
+}
+
+.table td.current-day {
+  background-color: #dc3545;
+  color: white !important;
+  border-radius: 50%;
+}
+#calendar-body{
+  padding: 8px;
+}
+p {
+  font-size: 14px;
+}
+.table th{
+  padding: 8px !important;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+#calendar-main-slider{
+  border-radius: 20px !important;
+}
+
+
+/* section styling */
+.site {
+  background-color: #E8F1F5;
+  width: 92% !important;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px !important;
+}
+
+.site img {
+  width: 40px;
+  height: 40px;
+}
+
+.site p {
+  font-weight: medium;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.site h1 {
+  font-size: 24px;
+  font-weight: medium;
+}
+
+.caroline-container {
+  margin-top: 100px;
+}
+
+.caroline {
+  background-color: #E8F1F5;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+.caroline h1 {
+  font-size: 16px;
+
+}
+
+.caroline p {
+  font-size: 12px;
+}
+
+.caroline button {
+  background-color: #E50F25;
+  border: none;
+  color: #FFF;
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.caroline-main img {
+  width: 120px;
+}
+
+.doct img {
+  max-width: 285px;
+  width: 100%;
+}
+
+.card-main {
+  text-align: center;
+  background-color: #E8F1F5;
+  padding: 15px 10px;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.card-main img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-main h2 {
+  font-size: 16px;
+
+}
+
+.card-main p {
+  padding: 0px 12px;
+  font-size: 12px;
+
+}
+
+.card-main button {
+  padding: 5px 11px;
+  background-color: #E50F25;
+  border: none;
+  font-size: 13px;
+  color: #FFF;
+  border-radius: 5px;
+}
+/* Chart Container */
+.chart-container {
+  max-width: 250px;
+  width: 100%;  /* Ensures responsiveness */
+  position: relative;
+  margin-bottom: 20px;  /* Add space between charts */
+}
+
+/* Center Percentage within Charts */
+.chart-percentage {
+  position: absolute;
+  top: 42%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bfff;
+}
+.chart-percentage2 {
+  position: absolute;
+  top: 44px;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bfff;
+}
+
+.chart-percentage2 {
+  font-size: 18px;  /* Slightly smaller for the second chart */
+}
+
+/* Chart Main Container */
+.chart-main {
+  position: relative;
+  height: 100px;
+}
+
+/* Highlight Current Day in Calendar */
+.current-day {
+  background-color: #0d6efd;
+  color: white !important;
+  border-radius: 50%;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  /* Charts stacked vertically on smaller screens */
+  .chart-container {
+    width: 100%;  /* Full width for mobile */
+    max-width: none;
+  }
+  .calendar-container{
+    margin-top: 10px !important;
+  }
+  .chart-percentage,
+  .chart-percentage2 {
+    font-size: 20px;  /* Adjust font size for smaller screens */
+  }
+
+  .row .col-6 {
+    flex: 0 0 100%;  /* Each chart takes full width */
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .chart-percentage {
+    top: 43%;
+    left: 51%;
+  }
+  .chart-percentage2 {
+    top: 44px;
+    left: 50/5%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Even smaller adjustments for mobile */
+  .chart-container {
+    margin-bottom: 15px;
+  }
+
+  .chart-percentage,
+  .chart-percentage2 {
+    font-size: 18px;  /* Smaller size on small devices */
+  }
+  #youngPatientsChart{
+    width: 170px;
+    height: 170px;
+  }
+
+}
+
+
+#youngPatientsChart{
+  width: 270px;
+  height: 270px;
+}
+#oldPatientsChart{
+  height: 90px;
+  width: 90px;
+}
+@media (max-width: 500px) {
+  .chart-percentage2 {
+    position: absolute;
+    top: 45px;
+  
+}
+
+}
+.nav{
+  background-color: #e6f4f7 !important;
+}
