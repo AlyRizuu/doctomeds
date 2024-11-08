@@ -21,12 +21,6 @@ body {
 .dashboard_tab .medica-img{
   width: 50%;
 }
-.dashboard_tab-hid-show i, .dashboard_tab-hid-show span{
-  display: none;
-}
-.dashboard_tab-hid-show .medica{
-  display: none;
-}
 .dashboard_tab:hover{
   background-color: #f8f9fa;
 }
@@ -171,15 +165,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .dashboard_tab .medica-img{
-    display: none;
-  }
-  .dashboard_tab-hid-show i, .dashboard_tab-hid-show span{
-    display: inline-block;
-  }
-  .dashboard_tab-hid-show .medica{
-    display: inline-block;
-  }
+  
   .sidebar {
     left: -250px;
     position: absolute;
